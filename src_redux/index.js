@@ -4,8 +4,8 @@ import App from './App'
 import store from './redux/store'
 
 ReactDom.render(
-    <App />,
-    document.getElementById('root')
+  <App />,
+  document.getElementById('root')
 )
 
 console.log(store)

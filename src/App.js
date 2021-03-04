@@ -1,10 +1,12 @@
 import Count from './components/count'
+import Person from './components/person'
 
 function App () {
   return (
     <div>
-      <div>hello world</div>
       <Count />
+      <hr/>
+      <Person />
     </div>
   )
 }

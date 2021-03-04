@@ -1,17 +1,15 @@
 /**
- * Reducers 纯函数
+ * person组件的Reducers 纯函数
  * 接收两个参数，分别为：之前的状态(previousState)和动作对象(action)
  */
 
-const initState = 0
+const initState = ['张三']
 
 export default function countReuder (preState = initState, action) {
   const { type, data } = action
   switch (type) {
-    case 'increment':
-      return preState + data
-    case 'decrement':
-      return preState - data
+    case 'addPerson':
+      return [data, ...preState]
     default:
       return preState
   }

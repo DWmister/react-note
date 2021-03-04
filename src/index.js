@@ -2,17 +2,17 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import App from './App'
 import store from './redux/store'
+import { Provider } from 'react-redux'
 
+/**
+ * Provider
+ * 为组件提供state
+ * 放到app外层，则app的所有子组件默认都可取到state。
+ * 原理为react组件的context属性
+ */
 ReactDom.render(
-    <App />,
-    document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 )
-
-console.log(store)
-// subscribe(listener) 添加变化监听器检测redux中状态的变化，每当 dispatch action时都会执行
-store.subscribe(() => {
-  ReactDom.render(
-    <App />,
-    document.getElementById('root')
-  )
-})

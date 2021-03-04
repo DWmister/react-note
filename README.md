@@ -6,6 +6,9 @@
 ### redux原理图
 ![redux原理](/public/img/redux原理图.png)
 
+### react-redux原理图
+![react-redux原理](/public/img/react-redux模型图.png)
+
 ### 添加eslint
 ```bash
 yarn add eslint -D

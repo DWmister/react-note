@@ -17,8 +17,17 @@ module.exports = {
   plugins: [
     'react'
   ],
+  parser: 'babel-eslint',
   rules: {
     'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    indent: ['error', 2]
+  },
+  // 共享设置
+  settings: {
+    react: {
+      // detect 自动匹配所安装的react版本
+      version: 'detect'
+    }
   }
 }
